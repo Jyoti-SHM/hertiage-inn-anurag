@@ -1,0 +1,36 @@
+/*
+Varanasi Pages — Additive Stylesheet
+Only new selectors used by service-details.html and news-details.html.
+Nothing in main.css is overridden or duplicated here.
+*/
+
+/* Breadcrumb bullet separator (fa-circle-small is not in every FA subset) */
+.breadcrumb-wrapper .page-heading .breadcrumb-items li i.fa-circle-small {
+  font-size: 6px;
+  vertical-align: middle;
+}
+
+/* Restaurant page: three-image strip under the details list */
+.service-details-wrapper .details-content .details-image-2 {
+  margin: 10px 0 20px;
+}
+.service-details-wrapper .details-content .details-image-2 img {
+  border-radius: 8px;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+/* Sidebar CTA card needs a legible overlay since it now carries a photo background */
+.main-sideber .service-details-sidebar {
+  position: relative;
+  isolation: isolate;
+}
+.main-sideber .service-details-sidebar::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(58, 13, 20, 0.55) 0%, rgba(58, 13, 20, 0.88) 100%);
+  border-radius: 16px;
+  z-index: -1;
+}
