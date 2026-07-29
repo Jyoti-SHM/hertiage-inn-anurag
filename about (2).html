@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--<< Header Area >>-->
+    <head>
+       <!-- ========== Meta Tags ========== -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="About Hotel Heritage Inn, Varanasi — our story, our people and our Banarasi dining tradition.">
+        <!-- ======== Page title ============ -->
+        <title>About Us - Hotel Heritage Inn</title>
+        <!--<< Favcion >>-->
+        <link rel="shortcut icon" href="assets\images\logo1.png" type="image/x-icon">
+        <!--<< Bootstrap min.css >>-->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <!--<< All Min Css >>-->
+        <link rel="stylesheet" href="assets/css/all.min.css">
+        <!--<< Animate.css >>-->
+        <link rel="stylesheet" href="assets/css/animate.css">
+        <!--<< Magnific Popup.css >>-->
+        <link rel="stylesheet" href="assets/css/magnific-popup.css">
+        <!--<< Mousecursor.css >>-->
+        <link rel="stylesheet" href="assets/css/mousecursor.css">
+        <!--<< MeanMenu.css >>-->
+        <link rel="stylesheet" href="assets/css/meanmenu.css">
+         <!--<< Odometer.css >>-->
+        <link rel="stylesheet" href="assets/css/odometer.css">
+        <!--<< Swiper Bundle.css >>-->
+        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+        <!--<< Nice Select.css >>-->
+        <link rel="stylesheet" href="assets/css/nice-select.css">
+        <!--<< Main.css >>-->
+        <link rel="stylesheet" href="assets/css/main.css">
+        <link rel="stylesheet" href="assets/css/custom.css">
+        <!--<< room.css >>-->
+        <link rel="stylesheet" href="assets/css/room-details-custom.css">
+
+        <!--<< About Page Custom Styles >>-->
+        <style>
+            /* ---- Heritage timeline ---- */
+            .heritage-timeline{ position:relative; padding-top:10px; }
+            .heritage-timeline .timeline-track{ position:relative; }
+            .heritage-timeline .timeline-track::before{
+                content:""; position:absolute; top:0; bottom:0; left:29px;
+                width:2px; background:repeating-linear-gradient(180deg, var(--border-2) 0 8px, transparent 8px 16px);
+            }
+            @media (max-width:767px){ .heritage-timeline .timeline-track::before{ left:19px; } }
+            .heritage-timeline .timeline-item{ position:relative; display:flex; gap:28px; padding:0 0 46px 0; }
+            .heritage-timeline .timeline-item:last-child{ padding-bottom:0; }
+            .heritage-timeline .timeline-dot{
+                flex:0 0 auto; width:60px; height:60px; border-radius:50%;
+                background:var(--maroon); color:var(--white); display:flex; align-items:center; justify-content:center;
+                font-family:var(--font-heading, inherit); font-weight:600; font-size:14px; border:3px solid var(--gold);
+                position:relative; z-index:2;
+            }
+            @media (max-width:767px){ .heritage-timeline .timeline-dot{ width:40px; height:40px; font-size:11px; } }
+            .heritage-timeline .timeline-content{ padding-top:6px; }
+            .heritage-timeline .timeline-content h5{ color:var(--maroon); margin-bottom:6px; letter-spacing:.5px; }
+            .heritage-timeline .timeline-content span.era{ display:inline-block; color:var(--gold); font-weight:600; font-size:13px; text-transform:uppercase; letter-spacing:1px; margin-bottom:8px; }
+            .heritage-timeline .timeline-content p{ color:var(--text-2); margin-bottom:0; max-width:640px; }
+
+            /* ---- Values / philosophy chips reused from feature icons ---- */
+            .value-chip{ text-align:center; padding:34px 20px; background:var(--white-soft); border:1px solid var(--border); border-radius:10px; height:100%; transition:.35s; }
+            .value-chip:hover{ transform:translateY(-6px); border-color:var(--gold); box-shadow:var(--box-shadow); }
+            .value-chip .icon{ width:56px; height:56px; margin:0 auto 18px; }
+            .value-chip .icon img{ width:100%; height:100%; object-fit:contain; }
+            .value-chip h6{ color:var(--maroon); margin-bottom:10px; }
+            .value-chip p{ color:var(--text-2); font-size:14px; margin-bottom:0; }
+
+            /* ---- Specialty (chef) cards ---- */
+            .specialty-tag{ display:inline-block; background:var(--maroon); color:var(--white); font-size:12px; font-weight:600; letter-spacing:.5px; padding:5px 14px; border-radius:100px; margin-bottom:14px; }
+
+            /* ---- Gallery lightbox grid ---- */
+            .heritage-gallery-grid{ display:grid; grid-template-columns:repeat(4,1fr); grid-auto-rows:130px; gap:14px; }
+            .heritage-gallery-grid a{ position:relative; display:block; overflow:hidden; border-radius:8px; }
+            .heritage-gallery-grid a img{ width:100%; height:100%; object-fit:cover; transition:transform .5s ease; display:block; }
+            .heritage-gallery-grid a:hover img{ transform:scale(1.08); }
+            .heritage-gallery-grid a::after{ content:"\f00e"; font-family:"Font Awesome 6 Pro"; position:absolute; inset:0; display:flex; align-items:center; justify-content:center; color:#fff; font-size:20px; background:rgba(28,28,28,.0); opacity:0; transition:.35s; }
+            .heritage-gallery-grid a:hover::after{ opacity:1; background:rgba(28,28,28,.35); }
+            .heritage-gallery-grid a.tall{ grid-row:span 2; }
+            @media (max-width:991px){ .heritage-gallery-grid{ grid-template-columns:repeat(3,1fr); } }
+            @media (max-width:575px){ .heritage-gallery-grid{ grid-template-columns:repeat(2,1fr); grid-auto-rows:110px; } .heritage-gallery-grid a.tall{ grid-row:span 1; } }
+
+            /* ---- Testimonials ---- */
+            .testimonial-card{ background:var(--white-soft); border:1px solid var(--border); border-radius:10px; padding:34px 30px; height:100%; position:relative; }
+            .testimonial-card .quote-mark{ color:var(--gold); font-size:34px; line-height:1; margin-bottom:14px; font-family:Georgia, serif; }
+            .testimonial-card .stars i{ color:var(--gold); font-size:13px; margin-right:2px; }
+            .testimonial-card p.review{ color:var(--text-2); margin:14px 0 18px; font-style:italic; }
+            .testimonial-card .guest{ display:flex; align-items:center; gap:12px; }
+            .testimonial-card .guest .avatar{ width:44px; height:44px; border-radius:50%; background:var(--maroon); color:var(--white); display:flex; align-items:center; justify-content:center; font-weight:600; }
+            .testimonial-card .guest h6{ margin-bottom:2px; color:var(--ink); }
+            .testimonial-card .guest span{ font-size:13px; color:var(--text-2); }
+        </style>
+    </head>
+    <body>
+
+       <!-- Preloader Start -->
+        <div id="preloader">
+        <div class="preloader-content">
+            <img src="assets\images\logo1.png" alt="Hotel Logo" class="preloader-logo">
+            <div class="spinner"></div>
+            <p>Booking your experience...</p>
+        </div>
+        </div>
+      <!-- Preloader End -->
+
+        <!-- GT Back To Top Start -->
+        <button id="back-top" class="back-to-top show">
+            <i class="fa-regular fa-arrow-up"></i>
+        </button>
+
+        <!-- GT MouseCursor Start -->
+        <div class="mouseCursor cursor-outer"></div>
+        <div class="mouseCursor cursor-inner"></div>
+
+         <!-- Offcanvas Area Start -->
+        <div class="fix-area">
+            <div class="offcanvas__info">
+                <div class="offcanvas__wrapper">
+                    <div class="offcanvas__content">
+                        <div class="offcanvas__top mb-5 d-flex justify-content-between align-items-center">
+                            <div class="offcanvas__logo">
+                                <a href="index.html">
+                                    <img src="assets\images\logo1.png" alt="logo-img">
+                                </a>
+                            </div>
+                            <div class="offcanvas__close">
+                                <button>
+                                <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="mobile-menu fix mb-3"></div>
+                        <div class="offcanvas__contact d-xl-block">
+                            <h4 class="d-xl-block">Contact Info</h4>
+                            <ul class="d-xl-block">
+                                <li class="d-flex align-items-center">
+                                    <div class="offcanvas__contact-icon">
+                                        <i class="fal fa-map-marker-alt"></i>
+                                    </div>
+                                </li>
+                                <li class="d-flex align-items-center">
+                                    <div class="offcanvas__contact-icon mr-15">
+                                        <i class="fal fa-envelope"></i>
+                                    </div>
+                                    <div class="offcanvas__contact-text">
+                                        <a href="mailto:heritageinn21@gmail.com"><span class="heritageinn21@gmail.com">heritageinn21@gmail.com</span></a>
+                                    </div>
+                                </li>
+                                <li class="d-flex align-items-center">
+                                    <div class="offcanvas__contact-icon mr-15">
+                                        <i class="fal fa-clock"></i>
+                                    </div>
+                                    <div class="offcanvas__contact-text">
+                                        <a target="_blank" href="#">Mod-friday, 09am -05pm</a>
+                                    </div>
+                                </li>
+                                <li class="d-flex align-items-center">
+                                    <div class="offcanvas__contact-icon mr-15">
+                                        <i class="far fa-phone"></i>
+                                    </div>
+                                    <div class="offcanvas__contact-text">
+                                        <a href="tel:+919839143069">+91 9839143069</a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="social-icon d-flex align-items-center">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-youtube"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="offcanvas__overlay"></div>
+
+        <!-- Header Section Start -->
+        <header id="header-sticky" class="header-1 header-3">
+            <div class="container-fluid">
+                <div class="mega-menu-wrapper">
+                    <div class="header-main">
+                        <div class="header-left">
+                            <div class="logo">
+                            <a href="index.html" class="header-logo">
+                                <img src="assets\images\logo1.png" alt="logo-img">
+                            </a>
+                            <a href="index.html" class="header-logo-2">
+                                <img src="assets\images\logo1.png" alt="logo-img">
+                            </a>
+                        </div>
+                        </div>
+                          <div class="header-right style-3 d-flex justify-content-end align-items-center">
+                             <div class="mean__menu-wrapper">
+                                <div class="main-menu">
+                                    <nav id="mobile-menu">
+                                        <ul>
+                                            <li class="has-dropdown menu-thumb">
+                                                <a href="index.html">
+                                                    Home
+                                                </a>
+
+                                            <li class="has-dropdown d-xl-none">
+                                                <a href="index.html" class="border-none">
+                                                Home
+                                                </a>
+                                            </li>
+                                            <li class="active">
+                                                <a href="about.html">About Us</a>
+                                            </li>
+                                            <li class="has-dropdown">
+                                                <a href="room.html">
+                                                    Rooms
+                                                </a>
+                                                <ul class="submenu">
+                                                    <li><a href="room-deluxe.html">Deluxe Room</a></li>
+                                                    <li><a href="room-duplex.html">Duplex Room</a></li>
+                                                    <li><a href="room-executive-superior.html">Executive Room & Superior Room</a></li>
+                                                    <li><a href="room-executive-triple.html">Executive Triple Room</a></li>
+                                                    <li><a href="room-family.html">Family Room</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="restaurant.html">
+                                                    Restaurant
+                                                </a>
+                                            </li>
+                                           <li>
+                                                <a href="Offers.html">
+                                                    Offers
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="contact.html">Contact Us</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="header-button">
+                                <a href="https://www.axisrooms.com/beV2/home1.html?bookingEngineId=937" class="theme-btn style-3">
+                                   BOOK NOW
+                                </a>
+                            </div>
+                            <div class="header__hamburger d-xl-none my-auto">
+                                <div class="sidebar__toggle">
+                                    <i class="fas fa-bars"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Breadcrumb Section Start -->
+        <div class="breadcrumb-wrapper bg-cover" style="background-image: url(assets\images\Restaurant.jpeg);">
+            <div class="container">
+                <div class="page-heading">
+                    <h1>About Hotel Heritage Inn</h1>
+                    <ul class="breadcrumb-items">
+                        <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                        <li><i class="fa-solid fa-chevron-right"></i></li>
+                        <li>About Us</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!--About Section Start -->
+        <section class="about-section section-padding fix section-bg">
+        <div class="container">
+            <div class="about-wrapper">
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <div class="about-image">
+                            <img src="assets\images\hm-bnner.jpeg" alt="Hotel Heritage Inn courtyard">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="about-content">
+                            <div class="section-title mb-0">
+                                <span class="sub-title wow fadeInUp">Our Story</span>
+                                <h2 class="wow fadeInUp" data-wow-delay=".3s">
+                                    A Home for Travellers on the Ghats of Kashi
+                                </h2>
+                            </div>
+                            <p class="text wow fadeInUp" data-wow-delay=".3s">
+                                Hotel Heritage Inn was born from a simple belief — that every traveller arriving in Varanasi, the oldest living city on earth, deserves a warm, unhurried welcome. Tucked in Shivala, minutes from the ghats, we blend the quiet dignity of an old Banarasi household with the comforts modern guests expect. What began as a small family-run guesthouse has grown into a trusted address for pilgrims, explorers and business travellers alike, without ever losing the personal touch that started it all.
+                            </p>
+                            <div class="list-item wow fadeInUp" data-wow-delay=".5s">
+                                <ul class="list">
+                                    <li>
+                                        <i class="fa-solid fa-circle-chevron-right"></i>
+                                        Family-run since day one
+                                    </li>
+                                    <li>
+                                        <i class="fa-solid fa-circle-chevron-right"></i>
+                                        Steps from the River Ganges
+                                    </li>
+                                </ul>
+                                <ul class="list">
+                                    <li>
+                                        <i class="fa-solid fa-circle-chevron-right"></i>
+                                        Rooted in Banarasi hospitality
+                                    </li>
+                                    <li>
+                                        <i class="fa-solid fa-circle-chevron-right"></i>
+                                        Guest care, around the clock
+                                    </li>
+                                </ul>
+                            </div>
+                                <a href="contact.html" class="theme-btn">Get In Touch</a>
+                                <span class="button-text">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+
+        <!--Heritage Timeline Section Start -->
+        <section class="section-padding pt-0 fix">
+            <div class="container">
+                <div class="section-title text-center">
+                    <span class="sub-title wow fadeInUp">Our Journey</span>
+                    <h2 class="wow fadeInUp" data-wow-delay=".3s">Milestones Along the Ganges</h2>
+                </div>
+                <div class="heritage-timeline mt-5">
+                    <div class="timeline-track">
+                        <div class="timeline-item wow fadeInUp" data-wow-delay=".2s">
+                            <div class="timeline-dot">Y1</div>
+                            <div class="timeline-content">
+                                <span class="era">The Beginning</span>
+                                <h5>A Guesthouse Opens in Shivala</h5>
+                                <p>Hotel Heritage Inn opens its doors near the Anandmayi Hospital, offering a handful of simple, spotless rooms to pilgrims visiting the ghats.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item wow fadeInUp" data-wow-delay=".3s">
+                            <div class="timeline-dot">Y2</div>
+                            <div class="timeline-content">
+                                <span class="era">Growing Roots</span>
+                                <h5>The Kitchen Finds Its Voice</h5>
+                                <p>Our pure-vegetarian Banarasi kitchen takes shape, serving Baati Chokha and Tamatar Chaat to guests who keep coming back for the flavours.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item wow fadeInUp" data-wow-delay=".4s">
+                            <div class="timeline-dot">Y3</div>
+                            <div class="timeline-content">
+                                <span class="era">Expanding Comfort</span>
+                                <h5>New Rooms, Same Warmth</h5>
+                                <p>Deluxe, Executive, Family and Duplex rooms are added, each designed to suit a different kind of traveller — without changing how we treat them.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item wow fadeInUp" data-wow-delay=".5s">
+                            <div class="timeline-dot">Today</div>
+                            <div class="timeline-content">
+                                <span class="era">Present Day</span>
+                                <h5>A Trusted Address in Varanasi</h5>
+                                <p>Today, Hotel Heritage Inn welcomes travellers from across the world, pairing modern amenities with the timeless hospitality Kashi is known for.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Marque Section Start -->
+        <div class="marque-section fix section-padding pt-0">
+            <div class="scrolling-wrap">
+            <div class="comm">
+            <div class="cmn-textslide"><i class="fa-sharp fa-solid fa-star"></i> Hotel Heritage Inn</div>
+            <div class="cmn-textslide"><i class="fa-sharp fa-solid fa-star"></i> Best Restaurant</div>
+            <div class="cmn-textslide"><i class="fa-sharp fa-solid fa-star"></i> Luxury Hotel in Varanasi</div>
+        </div>
+        <div class="comm">
+            <div class="cmn-textslide"><i class="fa-sharp fa-solid fa-star"></i> Hotel Heritage Inn</div>
+            <div class="cmn-textslide"><i class="fa-sharp fa-solid fa-star"></i> Best Restaurant</div>
+            <div class="cmn-textslide"><i class="fa-sharp fa-solid fa-star"></i> Luxury Hotel in Varanasi</div>
+        </div>
+            <div class="comm">
+            <div class="cmn-textslide"><i class="fa-sharp fa-solid fa-star"></i> Hotel Heritage Inn</div>
+            <div class="cmn-textslide"><i class="fa-sharp fa-solid fa-star"></i> Best Restaurant</div>
+            <div class="cmn-textslide"><i class="fa-sharp fa-solid fa-star"></i> Luxury Hotel in Varanasi</div>
+        </div>
+        </div>
+        </div>
+
+        <!--Counter Section Start -->
+        <section class="counter-section-inn section-padding fix">
+            <div class="container">
+                <div class="bg-image bg-cover" style="background-image: url('assets\\images\\vns\\1 (1).jpg');">
+                    <div class="counter-wrapper-inner">
+                        <div class="counter-content wow fadeInUp" data-wow-delay=".2s">
+                            <h2><span class="odometer" data-count="12">00</span>+</h2>
+                            <p>Years of Hospitality</p>
+                        </div>
+                        <div class="counter-content wow fadeInUp" data-wow-delay=".3s">
+                            <h2><span class="odometer" data-count="15000">0</span>+</h2>
+                            <p>Guests Welcomed</p>
+                        </div>
+                        <div class="counter-content wow fadeInUp" data-wow-delay=".4s">
+                            <h2><span class="odometer" data-count="5">0</span></h2>
+                            <p>Room Categories</p>
+                        </div>
+                        <div class="counter-content wow fadeInUp" data-wow-delay=".5s">
+                            <h2><span class="odometer" data-count="4">0</span>.8</h2>
+                            <p>Average Guest Rating</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Our Philosophy Section Start -->
+        <section class="section-padding fix">
+            <div class="container">
+                <div class="section-title text-center">
+                    <span class="sub-title wow fadeInUp">What Guides Us</span>
+                    <h2 class="wow fadeInUp" data-wow-delay=".3s">Our Philosophy</h2>
+                </div>
+                <div class="row g-4 mt-2">
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay=".2s">
+                        <div class="value-chip">
+                            <div class="icon"><img src="assets/img/home-1/icon/01.svg" alt="img"></div>
+                            <h6>Genuine Hospitality</h6>
+                            <p>We treat every guest as a visitor to our own home, not a booking on a screen.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay=".3s">
+                        <div class="value-chip">
+                            <div class="icon"><img src="assets/img/home-1/icon/03.svg" alt="img"></div>
+                            <h6>Attentive Service</h6>
+                            <p>From airport pickup to late check-out, our team anticipates what you need next.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay=".4s">
+                        <div class="value-chip">
+                            <div class="icon"><img src="assets/img/home-1/icon/05.svg" alt="img"></div>
+                            <h6>Honest Banarasi Food</h6>
+                            <p>Our kitchen keeps recipes close to how they're cooked in Varanasi homes.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay=".5s">
+                        <div class="value-chip">
+                            <div class="icon"><img src="assets/img/home-1/icon/02.svg" alt="img"></div>
+                            <h6>Respect for the City</h6>
+                            <p>We help guests explore Kashi thoughtfully — its ghats, its rhythm, its quiet.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Chef's Specialties Section Start -->
+        <section class="room-section section-padding fix">
+        <div class="bg-image">
+            <img src="assets\images\vns\1 (4).jpg" alt="img">
+        </div>
+        <div class="container">
+            <div class="section-title-area">
+                <div class="section-title mb-0">
+                    <span class="sub-title text-white wow fadeInUp">From Our Kitchen</span>
+                    <h2 class="text-white wow fadeInUp" data-wow-delay=".3s">
+                        Chef's Signature Specialties
+                    </h2>
+                    <p class="mt-3 text-white wow fadeInUp" data-wow-delay=".3s">
+                        A few dishes our guests ask for by name — each cooked fresh, the traditional Banarasi way.
+                    </p>
+                </div>
+                <div class="array-buttons wow fadeInUp" data-wow-delay=".5s">
+                    <button class="array-prev">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button class="array-next">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="swiper room-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="room-box-item">
+                        <div class="room-image">
+                            <img src="assets\images\rest 2 (1).jpeg" alt="img">                            
+                            <span>CHEF'S PICK</span>
+                        </div>
+                        <div class="content-item">
+                            <div class="room-content">
+                                <h6>Banarasi Thali</h6>
+                                <h4>
+                                    <a href="restaurant.html">Royal Thali</a>
+                                </h4>
+                                <ul class="list">
+                                    <li>
+                                        <i class="fa-solid fa-leaf"></i>
+                                        Pure Vegetarian
+                                    </li>
+                                    <li>
+                                        <i class="fa-solid fa-pepper-hot"></i>
+                                        Seasonal Menu
+                                    </li>
+                                </ul>
+                            </div>
+                            <a href="restaurant.html" class="theme-btn">
+                                View Menu <i class="fa-solid fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="room-box-item">
+                        <div class="room-image">
+                            <img src="assets\images\rest 2 (2).jpeg" alt="img">                            
+                            <span>LOCAL FAVOURITE</span>
+                        </div>
+                        <div class="content-item">
+                            <div class="room-content">
+                                <h6>Slow Roasted</h6>
+                                <h4>
+                                    <a href="restaurant.html">Baati Chokha</a>
+                                </h4>
+                                <ul class="list">
+                                    <li>
+                                        <i class="fa-solid fa-fire"></i>
+                                        Wood Fired
+                                    </li>
+                                    <li>
+                                        <i class="fa-solid fa-leaf"></i>
+                                        Pure Vegetarian
+                                    </li>
+                                </ul>
+                            </div>
+                            <a href="restaurant.html" class="theme-btn">
+                                View Menu <i class="fa-solid fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="room-box-item">
+                        <div class="room-image">
+                            <img src="assets\images\rest 2 (3).jpeg" alt="img">                            
+                            <span>TANGY & FRESH</span>
+                        </div>
+                        <div class="content-item">
+                            <div class="room-content">
+                                <h6>Street-Style Chaat</h6>
+                                <h4>
+                                    <a href="restaurant.html">Tamatar Chaat</a>
+                                </h4>
+                                <ul class="list">
+                                    <li>
+                                        <i class="fa-solid fa-pepper-hot"></i>
+                                        Spiced
+                                    </li>
+                                    <li>
+                                        <i class="fa-solid fa-leaf"></i>
+                                        Pure Vegetarian
+                                    </li>
+                                </ul>
+                            </div>
+                            <a href="restaurant.html" class="theme-btn">
+                                View Menu <i class="fa-solid fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="room-box-item">
+                        <div class="room-image">
+                            <img src="assets\images\Restaurant.jpeg" alt="img">
+                            <span>SEASONAL DESSERT</span>
+                        </div>
+                        <div class="content-item">
+                            <div class="room-content">
+                                <h6>Saffron & Milk</h6>
+                                <h4>
+                                    <a href="restaurant.html">Thandai & Malaiyo</a>
+                                </h4>
+                                <ul class="list">
+                                    <li>
+                                        <i class="fa-solid fa-snowflake"></i>
+                                        Winter Special
+                                    </li>
+                                    <li>
+                                        <i class="fa-solid fa-leaf"></i>
+                                        Pure Vegetarian
+                                    </li>
+                                </ul>
+                            </div>
+                            <a href="restaurant.html" class="theme-btn">
+                                View Menu <i class="fa-solid fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+
+        <!--Gallery Section Start -->
+        <section class="section-padding fix">
+            <div class="container">
+                <div class="section-title text-center">
+                    <span class="sub-title wow fadeInUp">In Pictures</span>
+                    <h2 class="wow fadeInUp" data-wow-delay=".3s">Glimpses of Heritage Inn</h2>
+                </div>
+                <div class="heritage-gallery-grid mt-5 wow fadeInUp" data-wow-delay=".3s">
+                    <a href="assets\images\vns\1 (1).jpg" class="gallery-popup tall">
+                        <img src="assets\images\vns\1 (1).jpg" alt="Hotel Heritage Inn gallery">
+                    </a>
+                    <a href="assets\images\vns\1 (2).jpg" class="gallery-popup">
+                        <img src="assets\images\vns\1 (2).jpg" alt="Hotel Heritage Inn gallery">
+                    </a>
+                    <a href="assets\images\vns\1 (3).jpg" class="gallery-popup">
+                        <img src="assets\images\vns\1 (3).jpg" alt="Hotel Heritage Inn gallery">
+                    </a>
+                    <a href="assets\images\Restaurant.jpeg" class="gallery-popup tall">
+                        <img src="assets\images\Restaurant.jpeg" alt="Hotel Heritage Inn dining">
+                    </a>
+                    <a href="assets\images\vns\1 (5).jpg" class="gallery-popup">
+                        <img src="assets\images\vns\1 (5).jpg" alt="Hotel Heritage Inn gallery">
+                    </a>
+                    <a href="assets\images\vns\1 (6).jpg" class="gallery-popup">
+                        <img src="assets\images\vns\1 (6).jpg" alt="Hotel Heritage Inn gallery">
+                    </a>
+                    <a href="assets\images\rest 2 (1).jpeg" class="gallery-popup">
+                        <img src="assets\images\rest 2 (1).jpeg" alt="Hotel Heritage Inn dining">
+                    </a>
+                    <a href="assets\images\vns\1 (8).jpg" class="gallery-popup">
+                        <img src="assets\images\vns\1 (8).jpg" alt="Hotel Heritage Inn gallery">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!--Team Section Start -->
+        <section class="team-section section-padding fix">
+            <div class="container">
+                <div class="section-title text-center">
+                    <span class="sub-title wow fadeInUp">Meet The Team</span>
+                    <h2 class="wow fadeInUp" data-wow-delay=".3s">The Faces Behind Your Stay</h2>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay=".2s">
+                        <div class="team-card-item">
+                            <div class="team-image">
+                                <img src="assets\images\vns\1 (2).jpg" alt="Hotel Manager">
+                                <div class="social-icon">
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                                <div class="team-content">
+                                    <h5><a href="#">Ramesh Kumar</a></h5>
+                                    <p>General Manager</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay=".3s">
+                        <div class="team-card-item">
+                            <div class="team-image">
+                                <img src="assets\images\vns\1 (3).jpg" alt="Executive Chef">
+                                <div class="social-icon">
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                                <div class="team-content">
+                                    <h5><a href="#">Anjali Mishra</a></h5>
+                                    <p>Executive Chef</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay=".4s">
+                        <div class="team-card-item">
+                            <div class="team-image">
+                                <img src="assets\images\vns\1 (5).jpg" alt="Front Office Head">
+                                <div class="social-icon">
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                                <div class="team-content">
+                                    <h5><a href="#">Suresh Pandey</a></h5>
+                                    <p>Front Office Head</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay=".5s">
+                        <div class="team-card-item">
+                            <div class="team-image">
+                                <img src="assets\images\vns\1 (6).jpg" alt="Guest Relations">
+                                <div class="social-icon">
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                                <div class="team-content">
+                                    <h5><a href="#">Priya Tiwari</a></h5>
+                                    <p>Guest Relations</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Testimonial Section Start -->
+        <section class="testimonial-section section-padding fix">
+            <div class="container">
+                <div class="section-title text-center">
+                    <span class="sub-title wow fadeInUp">Guest Voices</span>
+                    <h2 class="wow fadeInUp" data-wow-delay=".3s">What Our Guests Say</h2>
+                </div>
+                <div class="row g-4 mt-2">
+                    <div class="col-lg-4 wow fadeInUp" data-wow-delay=".2s">
+                        <div class="testimonial-card">
+                            <div class="quote-mark">&ldquo;</div>
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="review">Woke up to the sound of temple bells and had the best Banarasi thali of our trip, right at the hotel. Felt like staying with family.</p>
+                            <div class="guest">
+                                <div class="avatar">A</div>
+                                <div>
+                                    <h6>Aditi Sharma</h6>
+                                    <span>Delhi, India</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 wow fadeInUp" data-wow-delay=".3s">
+                        <div class="testimonial-card">
+                            <div class="quote-mark">&ldquo;</div>
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="review">The staff arranged our sunrise boat ride on the Ganges without us even asking twice. Small gestures like that made the stay memorable.</p>
+                            <div class="guest">
+                                <div class="avatar">R</div>
+                                <div>
+                                    <h6>Rohan Verma</h6>
+                                    <span>Mumbai, India</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 wow fadeInUp" data-wow-delay=".4s">
+                        <div class="testimonial-card">
+                            <div class="quote-mark">&ldquo;</div>
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                            </div>
+                            <p class="review">Walking distance from the ghats, spotless rooms, and honestly the Baati Chokha alone is worth coming back for. Highly recommend.</p>
+                            <div class="guest">
+                                <div class="avatar">S</div>
+                                <div>
+                                    <h6>Sarah Williams</h6>
+                                    <span>London, UK</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Footer Section Start -->
+          <!-- CTA -->
+        <section class="rd-section tight">
+            <div class="container">
+                <div class="rd-cta">
+                    <div>
+                        <h3>Come Experience Our Story in Person</h3>
+                        <p>From the Ganges at dawn to a home-style Banarasi thali at night — we'd love to host you. Ask our travel desk to plan your stay, your boat ride and your city tour.</p>
+                    </div>
+                    <a href="contact.html" class="rd-btn outline" style="color:#fff !important;border-color:var(--hi-gold);">Ask Our Travel Desk <i class="fa-solid fa-chevron-right"></i></a>
+                </div>
+            </div>
+        </section>
+        <footer class="footer-section fix bg-cover" style="background-image: url(assets\\images\\Restaurant.jpeg);">
+        <div class="container">
+            <div class="footer-widget-wrapper">
+                <div class="row">
+                    <div class="col-xl-4 col-md-6 col-lg-3 wow fadeInUp" data-wow-delay=".2s">
+                        <div class="single-footer-widget">
+                            <div class="widget-title">
+                                <h5>About us</h5>
+                            </div>
+                            <div class="footer-content">
+                                <p>
+                                    Hotel Heritage Inn is a haven of peace and tranquility in the heart of Varanasi. The budget offering hotel provides unique experience of hospitality that makes guests feel at home. This hotel is a great option for leisure travellers who are looking for easy accessibility.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-md-6 col-lg-3 wow fadeInUp" data-wow-delay=".4s">
+                        <div class="single-footer-widget">
+                            <div class="widget-title">
+                                <h5>Hotel Best Services</h5>
+                            </div>
+                            <ul class="list">
+                                <li>
+                                    <a href="service-details.html">Airport pickup & drop</a>
+                                </li>
+                                <li>
+                                    <a href="service-details.html">Room booking</a>
+                                </li>
+                                <li>
+                                    <a href="service-details.html">Special Offers</a>
+                                </li>
+                                <li>
+                                    <a href="service-details.html">Special Foods</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 ps-lg-5 col-md-6 col-lg-3 wow fadeInUp" data-wow-delay=".6s">
+                        <div class="single-footer-widget">
+                            <div class="widget-title">
+                                <h5>Check In & Out Time</h5>
+                            </div>
+                            <ul class="date-list">
+                                <li>
+                                    Mon to Fri : <span class="style-1">08:00 - 11:00</span>
+                                </li>
+                                <li>
+                                    Saturday : <span>08:00 - 11:00</span>
+                                </li>
+                                <li>
+                                    Sunday : <span class="style-3">Closed</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 ps-lg-5 col-md-6 col-lg-3 wow fadeInUp" data-wow-delay=".8s">
+                        <div class="single-footer-widget">
+                            <div class="widget-title">
+                                <h5>Contact Us</h5>
+                            </div>
+                            <ul class="contact-item">
+                                <li>
+                                    <i class="fa-solid fa-location-dot"></i>
+                                     B-3/26-A,Shivala, Next to Anandmayi Hospital Varanasi, (UP) - INDIA
+                                </li>
+                                <li class="style-2">
+                                    <i class="fa-solid fa-envelope"></i>
+                                    <a href="mailto:heritageinn21@gmail.com">heritageinn21@gmail.com</a>
+                                </li>
+                                <li class="style-2">
+                                    <i class="fa-solid fa-phone"></i>
+                                    <a href="tel:+919839143069">+91 9839143069</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-wrapper">
+                    <div class="social-icon wow fadeInLeft" data-wow-delay=".3s">
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    </div>
+                    <ul class="footer-list wow fadeInUp" data-wow-delay=".5s">
+                        <li>
+                            <a href="contact.html">Terms & Conditions</a>
+                        </li>
+                        <li>/</li>
+                        <li>
+                            <a href="contact.html">Privacy Policy</a>
+                        </li>
+                        <li>/</li>
+                        <li>
+                            <a href="contact.html">Contact Us</a>
+                        </li>
+                    </ul>
+                    <p class="wow fadeInRight" data-wow-delay=".7s">Copyright© <span> Hotel Heritage Inn. All rights reserved.</span></p>
+                </div>
+                <a href="index.html" class="footer-logo wow fadeInUp" data-wow-delay=".3s">
+                    <img src="assets/images/logo.png" alt="Hotel Heritage Inn logo">
+                </a>
+            </div>
+        </div>
+        </footer>
+
+
+        <!--<< All JS Plugins >>-->
+        <script src="assets/js/jquery-3.7.1.min.js"></script>
+         <!--<< Ripple-Min Js >>-->
+       <script src="assets/js/jquery.ripples-min.js"></script>
+        <!--<< Viewport Js >>-->
+        <script src="assets/js/viewport.jquery.js"></script>
+        <!--<< Bootstrap Js >>-->
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <!--<< nice-selec Js >>-->
+        <script src="assets/js/jquery.nice-select.min.js"></script>
+        <!--<< Waypoints Js >>-->
+        <script src="assets/js/jquery.waypoints.js"></script>
+         <!--<< Odometer Js >>-->
+        <script src="assets/js/odometer.min.js"></script>
+        <!--<< Swiper Slider Js >>-->
+        <script src="assets/js/swiper-bundle.min.js"></script>
+        <!--<< MeanMenu Js >>-->
+        <script src="assets/js/jquery.meanmenu.min.js"></script>
+        <!--<< Magnific Popup Js >>-->
+        <script src="assets/js/jquery.magnific-popup.min.js"></script>
+        <!--<< Wow Animation Js >>-->
+        <script src="assets/js/wow.min.js"></script>
+        <!--<< Main.js >>-->
+        <script src="assets/js/main.js"></script>
+
+        <!--<< About Page Custom Script >>-->
+        <script>
+            (function ($) {
+                "use strict";
+                $(document).ready(function () {
+                    // Lightbox for the "Glimpses of Heritage Inn" gallery grid
+                    if ($.fn.magnificPopup) {
+                        $('.heritage-gallery-grid').magnificPopup({
+                            delegate: 'a.gallery-popup',
+                            type: 'image',
+                            gallery: { enable: true },
+                            image: { titleSrc: 'title' }
+                        });
+                    }
+                });
+            })(jQuery);
+        </script>
+    </body>
+</html>
