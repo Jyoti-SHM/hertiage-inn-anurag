@@ -108,8 +108,8 @@
 .rd-banner__crumb i{ font-size: 10px; margin: 0 10px; opacity:.7; }
 
 /* ---------- Section shell ---------- */
-.rd-section{ padding: 90px 0; }
-.rd-section.tight{ padding: 60px 0; }
+.rd-section{ padding: 90px clamp(20px, 3.5vw, 60px); }
+.rd-section.tight{ padding: 60px clamp(20px, 3.5vw, 60px); }
 .rd-section.on-cream2{ background: var(--hi-cream-2); }
 
 .rd-kicker{
