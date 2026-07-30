@@ -7,9 +7,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <meta name="description" content="About Hotel Heritage Inn, Varanasi — our story, our people and our Banarasi dining tradition.">
+        <meta name="description" content="Blog - Hotel Heritage Inn, Varanasi — travel stories, ghat guides, food trails and tips for your Kashi stay.">
         <!-- ======== Page title ============ -->
-        <title>About Us - Hotel Heritage Inn</title>
+        <title>Blog - Hotel Heritage Inn</title>
         <!--<< Favcion >>-->
         <link rel="shortcut icon" href="assets\images\logo1.png" type="image/x-icon">
         <!--<< Bootstrap min.css >>-->
@@ -36,78 +36,6 @@
         <!--<< room.css >>-->
         <link rel="stylesheet" href="assets/css/room-details-custom.css">
 
-        <!--<< About Page Custom Styles >>-->
-        <style>
-            /* ---- Heritage timeline ---- */
-            .heritage-timeline{ position:relative; padding-top:10px; }
-            .heritage-timeline .timeline-track{ position:relative; }
-            .heritage-timeline .timeline-track::before{
-                content:""; position:absolute; top:0; bottom:0; left:29px;
-                width:2px; background:repeating-linear-gradient(180deg, var(--border-2) 0 8px, transparent 8px 16px);
-            }
-            @media (max-width:767px){ .heritage-timeline .timeline-track::before{ left:19px; } }
-            .heritage-timeline .timeline-item{ position:relative; display:flex; gap:28px; padding:0 0 46px 0; }
-            .heritage-timeline .timeline-item:last-child{ padding-bottom:0; }
-            .heritage-timeline .timeline-dot{
-                flex:0 0 auto; width:60px; height:60px; border-radius:50%;
-                background:var(--maroon); color:var(--white); display:flex; align-items:center; justify-content:center;
-                font-family:var(--font-heading, inherit); font-weight:600; font-size:14px; border:3px solid var(--gold);
-                position:relative; z-index:2;
-            }
-            @media (max-width:767px){ .heritage-timeline .timeline-dot{ width:40px; height:40px; font-size:11px; } }
-            .heritage-timeline .timeline-content{ padding-top:6px; }
-            .heritage-timeline .timeline-content h5{ color:var(--maroon); margin-bottom:6px; letter-spacing:.5px; }
-            .heritage-timeline .timeline-content span.era{ display:inline-block; color:var(--gold); font-weight:600; font-size:13px; text-transform:uppercase; letter-spacing:1px; margin-bottom:8px; }
-            .heritage-timeline .timeline-content p{ color:var(--text-2); margin-bottom:0; max-width:640px; }
-
-            /* ---- Values / philosophy chips reused from feature icons ---- */
-            .value-chip{ text-align:center; padding:34px 20px; background:var(--white-soft); border:1px solid var(--border); border-radius:10px; height:100%; transition:.35s; }
-            .value-chip:hover{ transform:translateY(-6px); border-color:var(--gold); box-shadow:var(--box-shadow); }
-            .value-chip .icon{ width:56px; height:56px; margin:0 auto 18px; }
-            .value-chip .icon img{ width:100%; height:100%; object-fit:contain; }
-            .value-chip h6{ color:var(--maroon); margin-bottom:10px; }
-            .value-chip p{ color:var(--text-2); font-size:14px; margin-bottom:0; }
-
-            /* ---- Specialty (chef) cards ---- */
-            .specialty-tag{ display:inline-block; background:var(--maroon); color:var(--white); font-size:12px; font-weight:600; letter-spacing:.5px; padding:5px 14px; border-radius:100px; margin-bottom:14px; }
-
-            /* ---- Gallery lightbox grid ---- */
-            .heritage-gallery-grid{ display:grid; grid-template-columns:repeat(4,1fr); grid-auto-rows:130px; gap:14px; }
-            .heritage-gallery-grid a{ position:relative; display:block; overflow:hidden; border-radius:8px; }
-            .heritage-gallery-grid a img{ width:100%; height:100%; object-fit:cover; transition:transform .5s ease; display:block; }
-            .heritage-gallery-grid a:hover img{ transform:scale(1.08); }
-            .heritage-gallery-grid a::after{ content:"\f00e"; font-family:"Font Awesome 6 Pro"; position:absolute; inset:0; display:flex; align-items:center; justify-content:center; color:#fff; font-size:20px; background:rgba(28,28,28,.0); opacity:0; transition:.35s; }
-            .heritage-gallery-grid a:hover::after{ opacity:1; background:rgba(28,28,28,.35); }
-            .heritage-gallery-grid a.tall{ grid-row:span 2; }
-            @media (max-width:991px){ .heritage-gallery-grid{ grid-template-columns:repeat(3,1fr); } }
-            @media (max-width:575px){ .heritage-gallery-grid{ grid-template-columns:repeat(2,1fr); grid-auto-rows:110px; } .heritage-gallery-grid a.tall{ grid-row:span 1; } }
-
-            /* ---- Team & Testimonial sections (own namespace so nothing
-                     else on the site can re-theme them unexpectedly) ---- */
-            .hi-team-section,
-            .hi-testimonial-section{
-                background-color: var(--cream) !important;
-                padding-top: 100px;
-                padding-bottom: 100px;
-            }
-            @media (max-width:991px){
-                .hi-team-section,
-                .hi-testimonial-section{ padding-top:70px; padding-bottom:70px; }
-            }
-            .hi-team-section .team-card-item{ margin-bottom:0; }
-            .hi-team-section .row{ row-gap:30px; }
-            .hi-testimonial-section .row{ row-gap:24px; }
-
-            /* ---- Testimonials ---- */
-            .testimonial-card{ background:var(--white-soft); border:1px solid var(--border); border-radius:10px; padding:34px 30px; height:100%; position:relative; }
-            .testimonial-card .quote-mark{ color:var(--gold); font-size:34px; line-height:1; margin-bottom:14px; font-family:Georgia, serif; }
-            .testimonial-card .stars i{ color:var(--gold); font-size:13px; margin-right:2px; }
-            .testimonial-card p.review{ color:var(--text-2); margin:14px 0 18px; font-style:italic; }
-            .testimonial-card .guest{ display:flex; align-items:center; gap:12px; }
-            .testimonial-card .guest .avatar{ width:44px; height:44px; border-radius:50%; background:var(--maroon); color:var(--white); display:flex; align-items:center; justify-content:center; font-weight:600; }
-            .testimonial-card .guest h6{ margin-bottom:2px; color:var(--ink); }
-            .testimonial-card .guest span{ font-size:13px; color:var(--text-2); }
-        </style>
     </head>
     <body>
 
@@ -154,11 +82,6 @@
                                 <li class="d-flex align-items-center">
                                     <div class="offcanvas__contact-icon">
                                         <i class="fal fa-map-marker-alt"></i>
-                                        <li>                                    
-                                    <a href="https://www.google.com/maps/place/Hotel+Heritage+Inn,+Varanasi/" target="_blank" rel="noopener noreferrer">
-                                B-3/26-A,Shivala, Next to Anandmayi Hospital Varanasi, (UP) - INDIA - 221001.
-                                </a>                                    
-                                </li>
                                     </div>
                                 </li>
                                 <li class="d-flex align-items-center">
@@ -167,15 +90,14 @@
                                     </div>
                                     <div class="offcanvas__contact-text">
                                         <a href="mailto:heritageinn21@gmail.com"><span class="heritageinn21@gmail.com">heritageinn21@gmail.com</span></a>
-                                        <a href="mailto:rttvns@yahoo.com"><span class="rttvns@yahoo.com">rttvns@yahoo.com</span></a>
-                                    </div>                                    
+                                    </div>
                                 </li>
                                 <li class="d-flex align-items-center">
                                     <div class="offcanvas__contact-icon mr-15">
                                         <i class="fal fa-clock"></i>
                                     </div>
                                     <div class="offcanvas__contact-text">
-                                        <a target="_blank" href="#">All 7 days<br>24x7</a>
+                                        <a target="_blank" href="#">Mod-friday, 09am -05pm</a>
                                     </div>
                                 </li>
                                 <li class="d-flex align-items-center">
@@ -184,7 +106,6 @@
                                     </div>
                                     <div class="offcanvas__contact-text">
                                         <a href="tel:+919839143069">+91 9839143069</a>
-                                        <a href="tel:+919307750280">+91 9307750280</a>
                                     </div>
                                 </li>
                             </ul>
@@ -231,7 +152,7 @@
                                                 Home
                                                 </a>
                                             </li>
-                                            <li class="active">
+                                            <li>
                                                 <a href="about.html">About Us</a>
                                             </li>
                                             <li class="has-dropdown">
@@ -255,6 +176,9 @@
                                                 <a href="Offers.html">
                                                     Offers
                                                 </a>
+                                            </li>
+                                            <li class="active">
+                                                <a href="blog.html">Blog</a>
                                             </li>
                                             <li>
                                                 <a href="contact.html">Contact Us</a>
@@ -578,9 +502,10 @@
                             <ul class="contact-item">
                                 <li>
                                     <i class="fa-solid fa-location-dot"></i>
-                                    <a href="https://www.google.com/maps/place/Hotel+Heritage+Inn,+Varanasi/" target="_blank" rel="noopener noreferrer">
-                                B-3/26-A,Shivala, Next to Anandmayi Hospital Varanasi, (UP) - INDIA - 221001.
-                                </a>                                    
+                                    <a href="https://maps.google.com/?q=Hotel+Heritage+Inn,+Varanasi" target="_blank" rel="noopener noreferrer">
+                                        B-3/26-A,Shivala, Next to Anandmayi Hospital Varanasi, (UP)  INDIA - 221001
+                                    </a>
+                                     
                                 </li>
                                 <li class="style-2">
                                     <i class="fa-solid fa-envelope"></i>
@@ -613,11 +538,11 @@
                     </div>
                     <ul class="footer-list wow fadeInUp" data-wow-delay=".5s">
                         <li>
-                            <a href="contact.html">Terms & Conditions</a>
+                            <a href="blog.html">Blog</a>
                         </li>
                         <li>/</li>
                         <li>
-                            <a href="contact.html">Privacy Policy</a>
+                            <a href="galleryhtml">Gallery</a>
                         </li>
                         <li>/</li>
                         <li>

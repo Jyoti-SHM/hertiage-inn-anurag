@@ -4342,7 +4342,9 @@ span {
   top: 10px;
 }
 .style-offcanvas-2 .offcanvas__logo img {
-  width: 60px;
+  width: 100px; 
+  max-width: 100px;
+  height: auto;
 }
 .style-offcanvas-2 .mean-container .mean-nav ul li > a.mean-expand i {
   font-size: 14px !important;
@@ -7983,12 +7985,17 @@ span {
 }
 @media (max-width: 1199px) {
   .section-padding {
-    padding: 100px 0;
+    padding: 100px clamp(20px, 3.5vw, 60px);
   }
 }
 @media (max-width: 991px) {
   .section-padding {
-    padding: 80px 0;
+    padding: 80px 20px;
+  }
+}
+@media (max-width: 575px) {
+  .section-padding {
+    padding: 70px 15px;
   }
 }
 
@@ -9404,4 +9411,47 @@ span {
 .hero-content {
     position: relative;
     z-index: 1;
+}
+
+
+/* =====================================================================
+   Offcanvas logo — fit within panel, responsive across breakpoints
+   ===================================================================== */
+
+.offcanvas__logo{
+  display: flex;
+  align-items: center;
+  max-width: 160px;
+}
+
+.offcanvas__logo img{
+  width: 100%;
+  max-width: 140px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* Keep logo comfortably left of the close button on the top row */
+.offcanvas__top{
+  gap: 16px;
+}
+
+@media (max-width: 575px){
+  .offcanvas__logo{
+    max-width: 120px;
+  }
+  .offcanvas__logo img{
+    max-width: 100px;
+  }
+}
+
+/* Matches the panel shrinking to 300px on very small screens */
+@media (max-width: 450px){
+  .offcanvas__logo{
+    max-width: 100px;
+  }
+  .offcanvas__logo img{
+    max-width: 84px;
+  }
 }
