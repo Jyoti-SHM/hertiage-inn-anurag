@@ -3803,11 +3803,6 @@ span {
 .header-main .header-right .call-item h6 a {
   color: var(--white);
 }
-@media (max-width: 1399px) {
-  .header-main .header-right .header-button {
-    display: none;
-  }
-}
 .header-main .header-right .header-button .theme-btn {
   background-color: transparent;
   z-index: 1;
@@ -5398,7 +5393,7 @@ span {
 }
 .scrolling-wrap .comm .cmn-textslide i {
   font-size: 21px;
-  color: var(--theme);
+  color: var(--gold);
 }
 .scrolling-wrap:hover .comm {
   animation-play-state: paused;
@@ -7981,7 +7976,7 @@ span {
 }
 
 .section-padding {
-  padding: 120px 0;
+  padding: 30px 0;
 }
 @media (max-width: 1199px) {
   .section-padding {
@@ -8022,12 +8017,7 @@ span {
   /* Second card (hidden by default) */
   /* Hover (expand & switch cards) */
 }
-@media (max-width: 1399px) {
-  .service-wrapper .service-main-item.active {
-    display: none;
-  }
-}
-.service-wrapper .service-main-item .service-item,
+ .service-wrapper .service-main-item .service-item,
 .service-wrapper .service-main-item .service-card-item {
   position: absolute;
   top: 0;

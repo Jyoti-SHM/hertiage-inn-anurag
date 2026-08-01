@@ -1,4 +1,42 @@
 .logo img {
     width: 89px;
 }
-header{background-color: black;}
+header {
+    background-color: black;
+}
+
+.hotel-dining-section {
+    margin-top: 30px;
+    padding-bottom: 20px;
+}
+
+/* Global responsive banner padding */
+@media (max-width: 768px) {
+    .rd-banner {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .rd-banner .rd-banner__inner {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .header-button {
+        display: none !important;
+    }
+}
+
+/* Align Offer and Blog Details paragraph text with Restaurant page styling */
+.news-details-wrapper .news-details-content .text {
+    font-size: 16px !important;
+    line-height: 28px;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+@media (max-width: 1199px) {
+    .news-details-wrapper .news-details-content .text {
+        font-size: 16px !important;
+    }
+}

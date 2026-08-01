@@ -17,12 +17,6 @@
     border-radius: 10px;
     transition: all 0.6s ease;
 
-    &.active {
-        @include breakpoint (max-xxl) {
-            display: none;
-        }
-    }
-
     .service-item,
     .service-card-item {
       position: absolute;

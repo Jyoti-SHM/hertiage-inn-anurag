@@ -442,10 +442,6 @@
 
 		.header-button {
 
-			@include breakpoint (max-xxl){
-				display: none;
-			}
-
 			.theme-btn {
                 background-color: transparent;
                 z-index: 1;
