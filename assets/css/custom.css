@@ -40,3 +40,8 @@ header {
         font-size: 16px !important;
     }
 }
+
+/* Footer social icon hover color */
+.footer-section .social-icon a:hover {
+    color: var(--gold) !important;
+}
