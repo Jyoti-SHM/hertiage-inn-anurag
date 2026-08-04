@@ -266,6 +266,14 @@ button {
   color: #C7A05A;
 }
 
+.footer-section .footer-bottom .footer-list li a {
+  color: #C7A05A;
+}
+
+.footer-section .footer-bottom .footer-list li a:hover {
+  color: #E9D6A8;
+}
+
 .footer-section .footer-logo img {
   border-radius: 12px;
   box-shadow: 0 0 0 1px rgba(233, 214, 168, 0.25);
@@ -3369,11 +3377,11 @@ span {
   opacity: 0.7;
 }
 .footer-bottom .footer-wrapper .footer-list li a {
-  color: var(--white);
+  color: #ebb757;
   opacity: 0.7;
 }
 .footer-bottom .footer-wrapper .footer-list li a:hover {
-  color: var(--theme);
+  color: #E9D6A8;
   opacity: none;
 }
 .footer-bottom .footer-wrapper p {
