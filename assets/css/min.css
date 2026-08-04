@@ -135,8 +135,11 @@ h6 {
   color: var(--maroon);
 }
 
-a {
-  color: var(--maroon);
+a,
+a:hover,
+a:focus,
+a:visited {
+  color: var(--gold);
 }
 
 .section-title .sub-title,
@@ -255,6 +258,12 @@ button {
 
 .footer-section .footer-bottom .footer-wrapper p span {
   color: var(--theme);
+}
+
+.footer-section .footer-bottom .footer-wrapper p a,
+.footer-section .footer-bottom .footer-wrapper p a:hover,
+.footer-section .footer-bottom .footer-wrapper p a:focus {
+  color: var(--gold);
 }
 
 .footer-section .footer-logo img {

@@ -132,11 +132,14 @@ h5 {
 }
 
 h6 {
-  color: var(--maroon);
+  color: var(--gold);
 }
 
-a {
-  color: var(--maroon);
+a,
+a:hover,
+a:focus,
+a:visited {
+  color: var(--gold);
 }
 
 .section-title .sub-title,
@@ -254,6 +257,12 @@ button {
 }
 
 .footer-section .footer-bottom .footer-wrapper p span {
+  color: #C7A05A;
+}
+
+.footer-section .footer-bottom .footer-wrapper p a,
+.footer-section .footer-bottom .footer-wrapper p a:hover,
+.footer-section .footer-bottom .footer-wrapper p a:focus {
   color: #C7A05A;
 }
 
